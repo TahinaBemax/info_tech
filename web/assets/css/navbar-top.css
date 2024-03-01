@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(213, 213, 213);
+}
+/* .container {
+    min-height: 10vh;
+} */
+.container-fluid{
+    background-color: #fff;
+}
+.top-nav ul .nav-item {
+    margin: 0 5px;
+}
+.top-nav ul .nav-item a {
+    font-size: 1.3em;
+}
+
+/* filtre */
+.filtre-container form{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+}
+.filtre-container form .form-floating{
+    margin-right: 10px;
+}
+.filtre-container form .form-floating label{
+    color: #333;
+}
+.filtre-container form .form-floating input{
+    background: rgb(232, 232, 232);
+}
+.filtre-container form .prix{
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*  */
+
+.carousel-inner{
+    height: 45vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card {
+    min-height: 200px;
+}
+.card img{
+    height: 200px;
+    object-fit: scale-down;
+    object-position: center;
+}

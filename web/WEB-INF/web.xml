@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0"
+  metadata-complete="true">
+
+  <display-name>Tomcat Documentation</display-name>
+  <description>
+     Tomcat Documentation.
+  </description>
+  
+<!-- servlet login -->
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>servlet.Login_servlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/pages/login/login</url-pattern>
+  </servlet-mapping>
+<!--  -->
+
+<!-- servlet produit -->
+  <servlet>
+    <servlet-name>ligneCommande</servlet-name>
+    <servlet-class>produit.LigneCommande_servlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ligneCommande</servlet-name>
+    <url-pattern>/pages/admin/detail-commande</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ligneCommande2</servlet-name>
+    <servlet-class>produit.LigneCommande_servlet2</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ligneCommande2</servlet-name>
+    <url-pattern>/pages/admin/edit-detail-commande</url-pattern>
+  </servlet-mapping>
+<!--  -->
+
+<!-- servlet produit -->
+  <servlet>
+    <servlet-name>prodServlet</servlet-name>
+    <servlet-class>servlet.Produit_s</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>prodServlet</servlet-name>
+    <url-pattern>/pages/admin/produits</url-pattern>
+  </servlet-mapping>
+<!--  -->
+
+<!-- servlet edit produit -->
+  <servlet>
+    <servlet-name>editProdServlet</servlet-name>
+    <servlet-class>servlet.Produit_s2</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>editProdServlet</servlet-name>
+    <url-pattern>/pages/admin/edit-produit</url-pattern>
+  </servlet-mapping>
+<!--  -->
+
+
+<!-- servlet commande -->
+  <servlet>
+    <servlet-name>commande</servlet-name>
+    <servlet-class>servlet.Commande_serv</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>commande</servlet-name>
+    <url-pattern>/pages/admin/commande</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>commande1.0</servlet-name>
+    <servlet-class>servlet.Commande_serv</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>commande1.0</servlet-name>
+    <url-pattern>/pages/user/commande</url-pattern>
+  </servlet-mapping>
+<!--  -->
+
+<!-- servlet commande 2-->
+  <servlet>
+    <servlet-name>commande2</servlet-name>
+    <servlet-class>servlet.Commande_servlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>commande2</servlet-name>
+    <url-pattern>/pages/admin/edit-commande</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>commande2.1</servlet-name>
+    <servlet-class>servlet.Commande_servlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>commande2.1</servlet-name>
+    <url-pattern>/pages/user/home</url-pattern>
+  </servlet-mapping>
+<!--  -->
+
+
+<!-- servlet client -->
+  <servlet>
+    <servlet-name>client</servlet-name>
+    <servlet-class>client.Client_servlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>client</servlet-name>
+    <url-pattern>/pages/admin/client-servlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>client2</servlet-name>
+    <servlet-class>client.Client_servlet2</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>client2</servlet-name>
+    <url-pattern>/pages/admin/edit-client-servlet</url-pattern>
+  </servlet-mapping>
+<!--  -->
+
+  <error-page>
+    <error-code>403</error-code>
+    <location>/WEB-INF/jsp/403.jsp</location>
+  </error-page>
+
+</web-app>
